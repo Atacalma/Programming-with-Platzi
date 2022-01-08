@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu peso en otros planetas</title>
+</head>
+<body>
+    <h1> Tu peso en otros planetas</h1>
+    <p>En la tierra pesas distinto que en Marte o en Jupiter</p>
+    <script type= "text/javascript">
+        var usuario = prompt ("cual es tu peso?");
+        var planeta = prompt ("Elige tu planeta.\n 1 es Marte, 2 es Jupiter");
+        var peso = parseInt (usuario); //la FUNCION "parseint" lo que hace es transformar datos de cualquier tipo en NUMEROS ENTEROS
+        var gravedad_en_la_tierra = 9.8;
+        var gravedad_en_marte = 3.7;
+        var gravedad_en_jupiter = 24.8;
+        var peso_final;
+        var nombre_del_planeta; 
+        if (planeta == 1) 
+        {
+            peso_final = peso / gravedad_en_la_tierra * gravedad_en_marte;
+            nombre_del_planeta = "Marte";
+        }
+        else if (planeta == 2)
+        {
+            peso_final = peso / gravedad_en_la_tierra * gravedad_en_jupiter;
+            nombre_del_planeta = "Jupiter";
+        }
+        else 
+        { 
+            document.write ("No has escogido ninguna de las opciones existente. Por Favor, recargue la pagina y escoja una de las opciones");
+        }
+        
+        peso_final = peso_final.toFixed(2);
+        document.write ("Tu peso en " + nombre_del_planeta + " es<strong>" + peso_final + " kilos </strong>");
+    </script>  
+</body>
+</html>
